@@ -4,14 +4,16 @@ const Videobg = ({ movieId }) => {
   const trailerVideo=useSelector((store)=>store.movie?.trailerVideo)
   useMovieTrailer(movieId);
   return (
-    <div className="w-screen ">
-      <iframe
-       className="w-screen h-screen aspect-video"
-        src={"https://www.youtube.com/embed/"+trailerVideo?.key+'?&autoplay=1&mute=1'}
-        allow="acceleromenter; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-play"
-       
-      ></iframe>
-    </div>
+    <div  className="w-screen iframe box-border  flex overflow-hidden">
+    <iframe
+      className="h-full w-full"
+      src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?&autoplay=1&mute=1"}
+      // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      
+      
+    ></iframe>
+ </div>
+
   );
 };
 
