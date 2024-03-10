@@ -1,12 +1,16 @@
-import React from 'react'
 import Header from './Header'
+import useNowPlayingMovies from '../Hooks/useNowPlayingMovies'
+import MainContainer from './browseComponents/MainContainer'
+import SeconContainer from './browseComponents/SeconContainer'
 const Browse = () => {
+useNowPlayingMovies()
   return (
     <div>
       <Header/>
-      <div className=''>
+      <div className='flex '>
 
-      <h1 className='m-5'>Browse</h1>
+     <MainContainer/>
+     {/* <SeconContainer/> */}
       </div>
     </div>
   )

@@ -1,18 +1,20 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
 import { isEmailValid } from "../utils/Validate";
-import { createUserWithEmailAndPassword ,signInWithEmailAndPassword } from "firebase/auth";
-// import {createBrowserRouter,RouterProvider, useNavigate} from 'react-router-dom'
-import {createBrowserRouter,RouterProvider, useNavigate} from 'react-router-dom'
+import { createUserWithEmailAndPassword ,updateProfile,signInWithEmailAndPassword } from "firebase/auth";
+import { USER_AVTAR } from "../utils/const";
 
+import {addUser} from '../utils/userSlice'
 import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
 const Login = () => {
  
+  const dispatch= useDispatch();
   const [isSignIn, setIsSignIn] = useState(false);
   const email = useRef(null);
   const password = useRef(null);
+  const name=useRef(null);
   const [errorMessage, setErrorMessage] = useState();
-  const Navigate=useNavigate();
   const toggleSignInForm = () => {
     setIsSignIn(!isSignIn);
   };
@@ -21,6 +23,7 @@ const Login = () => {
     //validation
     setErrorMessage(isEmailValid(email.current.value, password.current.value));
     if (!isSignIn) {
+      // console.log(email.current.value)
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
@@ -29,9 +32,15 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          // Navigate("/browse")
-
-          // ...
+          updateProfile(auth.currentUser, {
+            displayName: name.current.value, photoURL:USER_AVTAR
+          }).then(() => {
+            const {uid,email, displayName, photoURL} = auth.currentUser;
+            dispatch(addUser({uid:uid,email:email,displayName:displayName , photoURL:photoURL}))
+            
+          }).catch((error) => {
+            setErrorMessage(error.message)
+          });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -44,7 +53,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          Navigate("/browse")
+          
           
           // ...
         })
@@ -84,6 +93,7 @@ const Login = () => {
                 className="
         my-2 w-full bg-slate-800 p-3 rounded-lg"
                 placeholder="Name"
+                ref={name}
               ></input>
             )}
             <input
