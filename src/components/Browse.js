@@ -1,12 +1,22 @@
-import React from 'react'
 import Header from './Header'
+import useNowPlayingMovies from '../Hooks/useNowPlayingMovies'
+import MainContainer from './browseComponents/MainContainer'
+import SeconContainer from './browseComponents/SeconContainer'
+import usePopularMovies from '../Hooks/usePopularMovies'
+import useTopRated from '../Hooks/useTopRated'
+import useUpcomingMovies from '../Hooks/useUpcomingMovies'
 const Browse = () => {
+useNowPlayingMovies();
+usePopularMovies();
+useTopRated();
+useUpcomingMovies();
   return (
-    <div>
+    <div className='box-border bg-black text-white overflow-hidden'>
       <Header/>
-      <div className=''>
+      <div className=' flex-col w-100  box-border overflow-hidden' >
 
-      <h1 className='m-5'>Browse</h1>
+     <MainContainer/>
+     <SeconContainer/>
       </div>
     </div>
   )

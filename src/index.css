@@ -1,9 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .LoginContainer{
     background-image:url('./utils/icon/netflixbg.jpg');
-    
-
+    }
+.iframe{
+    height: 100vh
 }
+/* Force scrollbar to always be visible */
+::-webkit-scrollbar {
+    display: block;
+    visibility: hidden;
+  }
+  
+  /* Customize scrollbar appearance */
+  ::-webkit-scrollbar {
+    width: 0px;
+    visibility: hidden;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000000;
+  }
+  
+  :hover::-webkit-scrollbar-thumb {
+    background-color: #b7b4b4;
+    opacity: 10%;
 
+    border-radius: 6px;
+  }
+  
