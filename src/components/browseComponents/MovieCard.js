@@ -1,7 +1,7 @@
 import React from 'react'
 import { Img_CDN_URL } from '../../utils/const'
 const MovieCard = ({posterPath}) => {
-    console.log(posterPath)
+   
   return (
     <div className='w-48 p-2' >
         
