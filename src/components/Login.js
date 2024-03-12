@@ -23,7 +23,7 @@ const Login = () => {
     //validation
     setErrorMessage(isEmailValid(email.current.value, password.current.value));
     if (!isSignIn) {
-      // console.log(email.current.value)
+      
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
@@ -70,7 +70,7 @@ const Login = () => {
       <Header />
       <div className="LoginContainer flex justify-center p-10 items-center h-screen rounded-e-3xl ">
         {/* <img src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" />     */}
-        <div className="flex-col justify-start  w-3/12   bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 rounded-3xl centre flex-col  background ">
+        <div className="flex-col justify-start  w-3/12  text-white  bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 rounded-3xl centre flex-col  background ">
           <h1 className="text-left px-10 pt-8 text-zinc-100 text-3xl">
             {isSignIn ? "Login" : "SignUp"}
           </h1>

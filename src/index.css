@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-.LoginContainer{
+
+.LoginContainer,.gptSearch{
+  height:200vh;
     background-image:url('./utils/icon/netflixbg.jpg');
     }
 .iframe{
