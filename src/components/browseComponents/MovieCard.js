@@ -1,7 +1,9 @@
 import React from 'react'
 import { Img_CDN_URL } from '../../utils/const'
 const MovieCard = ({posterPath}) => {
+
    console.log(posterPath,"movieCard")
+
   return (
     <div className='w-48  relative p-2' >
         
