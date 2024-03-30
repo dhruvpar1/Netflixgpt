@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Netflixgpt/static/css/main.4512b897.css",
+    "main.js": "/Netflixgpt/static/js/main.66c4031e.js",
+    "static/js/453.67699da7.chunk.js": "/Netflixgpt/static/js/453.67699da7.chunk.js",
+    "static/media/netflixbg.jpg": "/Netflixgpt/static/media/netflixbg.48144b150daf395902a3.jpg",
+    "static/media/Netflix_Logo_PMS.png": "/Netflixgpt/static/media/Netflix_Logo_PMS.303904f75553a51bbf31.png",
+    "index.html": "/Netflixgpt/index.html",
+    "main.4512b897.css.map": "/Netflixgpt/static/css/main.4512b897.css.map",
+    "main.66c4031e.js.map": "/Netflixgpt/static/js/main.66c4031e.js.map",
+    "453.67699da7.chunk.js.map": "/Netflixgpt/static/js/453.67699da7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4512b897.css",
+    "static/js/main.66c4031e.js"
+  ]
+}
