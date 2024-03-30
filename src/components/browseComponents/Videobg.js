@@ -6,7 +6,7 @@ const Videobg = ({ movieId }) => {
   return (
       // src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?&autoplay=1&mute=1"}
     // <div  className="w-screen iframe box-border  flex overflow-hidden">
-      <div className="h-screen w-screen">
+      <div className="h-1/3 sm:h-screen w-screen">
       <iframe className="h-[416px] md:h-[calc(100%-0px)] w-full pt-[118px] md:pt-[70px]"
         src={`https://www.youtube.com/embed/${trailerVideo?.key}?autoplay=1&mute=1&controls=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=0`}
         title="YouTube video player"

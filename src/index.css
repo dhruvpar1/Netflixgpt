@@ -6,9 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+.swiper-slide {
+width: 17%;
+}
 
 .LoginContainer,.gptSearch{
-  height:200vh;
+  height:100vh;
     background-image:url('./utils/icon/netflixbg.jpg');
     }
 .iframe{

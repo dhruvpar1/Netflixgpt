@@ -1,6 +1,7 @@
 import React from 'react'
 import MovieList from './MovieList'
 import { useSelector } from 'react-redux'
+import MovieSlider from './MovieSlider'
 const SeconContainer = () => {
   const movies=useSelector((store)=>store.movie)
   return (
@@ -10,6 +11,7 @@ const SeconContainer = () => {
       <MovieList title={"popular movies"} movies={movies.popularMovies} />
       <MovieList title={"Top Rated"} movies={movies.topRated} />
       <MovieList title={"Upcoming"} movies={movies.upcoming} />
+   
     </div>
   </div>
 
