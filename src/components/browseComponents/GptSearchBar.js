@@ -36,23 +36,29 @@ return json.results;
   };
 
   return (
-    <div className="  flex justify-center ">
+
+    <div className=" py-20 flex justify-center items-center sm:">
       <form
         action=""
         onSubmit={(e) => e.preventDefault()}
-        className="bg-black w-1/2  p-2 my-24"
+        className="bg-black flex-col justify-center items-center p-3 sm: w-1/2  p-2 my-24"
+
       >
         <input
           ref={searchText}
           type="text"
           name=""
           id=""
-          className="p-2 w-[70%] text-black"
+
+          className="w-[100%] p-3 sm:p-2  text-black"
+
           placeholder={lang[langKey].gptSearchPlaceholder}
         />
         <button
           onClick={handleGptSearchClick}
-          className="text-white my-1 mx-3   w-[25%] bg-red-700  hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800"
+
+          className="w-[95%] mt-3 sm:text-white my-1 mx-3  bg-red-700  hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800"
+
         >
           {lang[langKey].search}
         </button>
